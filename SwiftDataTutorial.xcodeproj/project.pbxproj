@@ -18,6 +18,7 @@
 		D3477A322AC9CB48006BB166 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A312AC9CB48006BB166 /* Expense.swift */; };
 		D3477A352AC9CF90006BB166 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A342AC9CF90006BB166 /* ExpenseCell.swift */; };
 		D3477A372AC9D016006BB166 /* AddExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */; };
+		D3477A392AC9D3EA006BB166 /* UpdateExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A382AC9D3EA006BB166 /* UpdateExpenseSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		D3477A312AC9CB48006BB166 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		D3477A342AC9CF90006BB166 /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
 		D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseSheet.swift; sourceTree = "<group>"; };
+		D3477A382AC9D3EA006BB166 /* UpdateExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExpenseSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				D3477A062AC9CA11006BB166 /* ContentView.swift */,
 				D3477A342AC9CF90006BB166 /* ExpenseCell.swift */,
 				D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */,
+				D3477A382AC9D3EA006BB166 /* UpdateExpenseSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				D3477A072AC9CA11006BB166 /* ContentView.swift in Sources */,
 				D3477A352AC9CF90006BB166 /* ExpenseCell.swift in Sources */,
 				D3477A092AC9CA11006BB166 /* Item.swift in Sources */,
+				D3477A392AC9D3EA006BB166 /* UpdateExpenseSheet.swift in Sources */,
 				D3477A372AC9D016006BB166 /* AddExpenseSheet.swift in Sources */,
 				D3477A052AC9CA11006BB166 /* SwiftDataTutorialApp.swift in Sources */,
 			);

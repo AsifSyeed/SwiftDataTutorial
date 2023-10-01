@@ -13,12 +13,16 @@ struct ContentView: View {
     @Environment(\.modelContext) var context
     @State private var isShowingItemSheet = false
     @Query(sort: \Expense.date) var expenses: [Expense]
+    @State private var editableExpense: Expense?
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(expenses) { expense in
                     ExpenseCell(expense: expense)
+                        .onTapGesture {
+                            editableExpense = expense
+                        }
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -30,6 +34,9 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $isShowingItemSheet) {
                 AddExpenseSheet()
+            }
+            .sheet(item: $editableExpense) { expense in
+                UpdateExpenseSheet(expense: expense)
             }
             .toolbar {
                 if !expenses.isEmpty {
