@@ -10,6 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     
+    @Environment(\.modelContext) var context
     @State private var isShowingItemSheet = false
     @Query(sort: \Expense.date) var expenses: [Expense]
 
@@ -18,6 +19,11 @@ struct ContentView: View {
             List {
                 ForEach(expenses) { expense in
                     ExpenseCell(expense: expense)
+                }
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        context.delete(expenses[index])
+                    }
                 }
             }
             .navigationTitle("Expenses")
