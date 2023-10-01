@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
     
     @State private var isShowingItemSheet = false
-    var expenses: [Expense] = []
+    @Query(sort: \Expense.date) var expenses: [Expense]
 
     var body: some View {
         NavigationStack {

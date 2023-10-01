@@ -105,7 +105,6 @@
 				D3477A332AC9CF85006BB166 /* View */,
 				D3477A302AC9CB42006BB166 /* Model */,
 				D3477A042AC9CA11006BB166 /* SwiftDataTutorialApp.swift */,
-				D3477A062AC9CA11006BB166 /* ContentView.swift */,
 				D3477A082AC9CA11006BB166 /* Item.swift */,
 				D3477A0A2AC9CA12006BB166 /* Assets.xcassets */,
 				D3477A0C2AC9CA12006BB166 /* Preview Content */,
@@ -149,6 +148,7 @@
 		D3477A332AC9CF85006BB166 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D3477A062AC9CA11006BB166 /* ContentView.swift */,
 				D3477A342AC9CF90006BB166 /* ExpenseCell.swift */,
 				D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */,
 			);
