@@ -15,6 +15,9 @@
 		D3477A182AC9CA12006BB166 /* SwiftDataTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A172AC9CA12006BB166 /* SwiftDataTutorialTests.swift */; };
 		D3477A222AC9CA12006BB166 /* SwiftDataTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A212AC9CA12006BB166 /* SwiftDataTutorialUITests.swift */; };
 		D3477A242AC9CA12006BB166 /* SwiftDataTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A232AC9CA12006BB166 /* SwiftDataTutorialUITestsLaunchTests.swift */; };
+		D3477A322AC9CB48006BB166 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A312AC9CB48006BB166 /* Expense.swift */; };
+		D3477A352AC9CF90006BB166 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A342AC9CF90006BB166 /* ExpenseCell.swift */; };
+		D3477A372AC9D016006BB166 /* AddExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		D3477A1D2AC9CA12006BB166 /* SwiftDataTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDataTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3477A212AC9CA12006BB166 /* SwiftDataTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTutorialUITests.swift; sourceTree = "<group>"; };
 		D3477A232AC9CA12006BB166 /* SwiftDataTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3477A312AC9CB48006BB166 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		D3477A342AC9CF90006BB166 /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
+		D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,8 @@
 		D3477A032AC9CA11006BB166 /* SwiftDataTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D3477A332AC9CF85006BB166 /* View */,
+				D3477A302AC9CB42006BB166 /* Model */,
 				D3477A042AC9CA11006BB166 /* SwiftDataTutorialApp.swift */,
 				D3477A062AC9CA11006BB166 /* ContentView.swift */,
 				D3477A082AC9CA11006BB166 /* Item.swift */,
@@ -128,6 +136,23 @@
 				D3477A232AC9CA12006BB166 /* SwiftDataTutorialUITestsLaunchTests.swift */,
 			);
 			path = SwiftDataTutorialUITests;
+			sourceTree = "<group>";
+		};
+		D3477A302AC9CB42006BB166 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3477A312AC9CB48006BB166 /* Expense.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3477A332AC9CF85006BB166 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3477A342AC9CF90006BB166 /* ExpenseCell.swift */,
+				D3477A362AC9D016006BB166 /* AddExpenseSheet.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3477A322AC9CB48006BB166 /* Expense.swift in Sources */,
 				D3477A072AC9CA11006BB166 /* ContentView.swift in Sources */,
+				D3477A352AC9CF90006BB166 /* ExpenseCell.swift in Sources */,
 				D3477A092AC9CA11006BB166 /* Item.swift in Sources */,
+				D3477A372AC9D016006BB166 /* AddExpenseSheet.swift in Sources */,
 				D3477A052AC9CA11006BB166 /* SwiftDataTutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

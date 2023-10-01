@@ -9,47 +9,42 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    
+    @State private var isShowingItemSheet = false
+    var expenses: [Expense] = []
 
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+                ForEach(expenses) { expense in
+                    ExpenseCell(expense: expense)
                 }
-                .onDelete(perform: deleteItems)
+            }
+            .navigationTitle("Expenses")
+            .navigationBarTitleDisplayMode(.large)
+            .sheet(isPresented: $isShowingItemSheet) {
+                AddExpenseSheet()
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                if !expenses.isEmpty {
+                    Button("Add Expense", systemImage: "plus") {
+                        isShowingItemSheet = true
                     }
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            .overlay {
+                if expenses.isEmpty {
+                    ContentUnavailableView(label: {
+                        Label("No expenses", systemImage: "list.bullet.rectangle.portrait")
+                    }, description: {
+                        Text("Start adding expenses to your list")
+                    }, actions: {
+                        Button("Add expense") {
+                            isShowingItemSheet = true
+                        }
+                    })
+                    .offset(y: -60)
+                }
             }
         }
     }
